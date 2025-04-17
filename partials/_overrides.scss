@@ -12,6 +12,36 @@
 
 // 4. Include any default map overrides here
 
+$font-sizes-additionals: map-merge(
+  $font-sizes,
+  (
+    "7": 0.8rem,
+    "8": 0.75rem,
+    "9": 0.6rem,
+    "10": 0.4rem,
+  )
+);
+
+$font-sizes: map-merge($font-sizes, $font-sizes-additionals);
+
+$border-widths-additionals: map-merge(
+  $border-widths,
+  (
+    "6": 6px,
+    "7": 7px,
+    "8": 8px,
+    "9": 9px,
+    "10": 10px,
+  )
+);
+
+$border-widths: map-merge($border-widths, $border-widths-additionals);
+
+$btn-padding-y: 0.75rem;
+$btn-padding-x: 2.5rem;
+
+$grid-gutter-width: 0.5rem;
+
 // 5. Include remainder of required parts
 @import "../bootstrap/scss/maps";
 @import "../bootstrap/scss/mixins";
